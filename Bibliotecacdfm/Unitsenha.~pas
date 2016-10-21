@@ -1,0 +1,48 @@
+unit Unitsenha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, Mask;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    MaskEdit1: TMaskEdit;
+    BitBtn1: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Unitbiblioteca;
+
+{$R *.DFM}
+
+procedure TForm2.BitBtn1Click(Sender: TObject);
+begin
+if (edit1.text='BIBLIOTECACDFM') and (maskedit1.text= 'LIVROSCDFM') or (edit1.text = 'C15B58B6') and (maskedit1.text = 'C15B58B6') then
+begin
+form1.show
+
+end
+
+else
+begin
+Application.messagebox('Nome de usúario e senha incorretos!', 'Atenção', MB_OK + MB_ICONINFORMATION);
+ end
+end;
+
+
+end.
